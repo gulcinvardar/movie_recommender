@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicted Recommendation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Recommendation based on what you watched!</h1>
+    <h2>Please rate some of the movies you watched!</h2>
+    <h3>Please select the genre and the millenium!</h3>
+
+    <form action="/nmf-recommend", method="post">
+        <div class="input">
+        {% for index in range(5) %}
+        <input type="text" name="title" placeholder="Enter movies" list="movies">
+        <input type="number" name="ratings" placeholder="Rate from (1-5)" min="1" max="5" required>
+        <br>
+        {% endfor %}
+    <datalist id="movies">
+        {%for movie in movies %}
+        <option value = "{{movie}}"></option>
+        {% endfor %}
+    </datalist>
+    </div>
+    <div class="dropdown">
+        Genres: <select type="text" name="genre" id="genres" list="genres">
+            <datalist id="genres">
+            {%for genre in genres %}
+            <option value="{{genre}}" selected="selected"> {{genre}}</option>
+            {% endfor %}
+            </datalist> 
+            </select>
+        Year: <select type="text" name="year" id="years" list="years">
+            <datalist id="years">
+            {%for year in years %}
+            <option value="{{year}}" selected="selected"> {{year}}</option>
+            {% endfor %}
+            </datalist>
+  </select>
+</div>
+        <button type="submit">Show Recommendation</button> 
+      </form> 
+      <div class="back"><a href='/'>Go Back to main</a></div>>
+</body>
+</html>
