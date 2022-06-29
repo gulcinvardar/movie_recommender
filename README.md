@@ -27,15 +27,18 @@ If the user clicks on the recommended movie, they will be directed to the movie-
 
 ### Folders
 
-- recommendation_movies
+- recommendation_movies:
+
 Contains the csv files downloaded from [MovieLens](http://movielens.org)
 
-- static 
+- static:
+
 Contains the images used in the web-app and the style.css file. 
 The CSS file will be removed after the styling with Bootstrap is completed. 
 For now, only the main page and the randomrecommendation pages are styled with Bootstrap, the rest will be done soon.
 
-- templates
+- templates:
+
 Contains the HTML files. 
 1. index.html : The main page. The user is asked to select from three recommendation methods.
 2. random.html : The page the user is directed after selecting 'I am feeling lucky!'. 
