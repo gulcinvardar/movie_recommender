@@ -93,6 +93,6 @@ To run the web-app locally:
 
 # Ideas for further development:
 
-Play around with the imputation
-Save the user and keep track of their rating 
-Use IMDB API 
+1. Play around with the imputation
+2. Save the user and keep track of their rating 
+3. Use IMDB API 
