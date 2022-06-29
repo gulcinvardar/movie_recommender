@@ -22,6 +22,7 @@ def read_pickle(filename):
     Reads pickled models and vectors.
     """
     with open(filename, "rb") as vectorizer:
+        
         return pickle.load(vectorizer)
     
 
@@ -31,6 +32,7 @@ def create_user_dataframe(titles, ratings):
     """       
     ratings = map(int, ratings)
     user_rating = dict(zip(titles,ratings))
+
     return user_rating
 
 def insert_new_user(user_rating):
@@ -74,5 +76,6 @@ def movie_tmdb_dict(movies_df, recommended_movies):
         tmdb_links.append(link)
     
     recommendation = map(dict, map(lambda t:zip(('title','link'),t), zip(recommended_movies,tmdb_links)))
+
     return recommendation
 
