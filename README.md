@@ -100,3 +100,10 @@ To run the web-app locally:
 1. Play around with the imputation
 2. Save the user and keep track of their rating 
 3. Use IMDB API 
+
+
+## License
+
+(c) 2022 Gülçin Vardar
+
+Distributed under the conditions of the MIT License. See LICENSE for details.
