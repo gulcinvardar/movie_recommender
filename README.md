@@ -10,6 +10,8 @@ The main page asks the user to select from:
 - *NMF (Non-negative matrix factorization)* model (I want a good guess)
 - *User-similarity* (What do people like me watch?)
 
+![](https://github.com/gulcinvardar/movie_recommender/blob/main/example_images_of_pages/main_page.jpg | width=100)
+
 2. User-input page:
 When selecting the method of the movie recommendation, the user is directed to the next page.
 In the next page, the user should rate 5 movies and select the year and genre preference for the movie recommendation:
