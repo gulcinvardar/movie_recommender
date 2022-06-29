@@ -23,6 +23,29 @@ The movies should be clicked from the list, but not written by the user
 If the user clicks on the recommended movie, they will be directed to the movie-info page on TMDB.
 
 
+## Contents:
+
+### Folders
+
+- recommendation_movies
+Contains the csv files downloaded from [MovieLens](http://movielens.org)
+
+- static 
+Contains the images used in the web-app and the style.css file. 
+The CSS file will be removed after the styling with Bootstrap is completed. 
+For now, only the main page and the randomrecommendation pages are styled with Bootstrap, the rest will be done soon.
+
+- templates
+Contains the HTML files. 
+1. index.html : The main page. The user is asked to select from three recommendation methods.
+2. random.html : The page the user is directed after selecting 'I am feeling lucky!'. 
+The user should give the input for year and genre selection.
+3. nmf.html : The page the user is directed after selecting 'I want a good guess!'. 
+The user should rate 5 movies and give the input for year and genre selection.
+4. user_sim.html : The page the user is directed after selecting 'What do people like me watch?'. 
+The user should rate 5 movies and give the input for year and genre selection.
+4. recommener_random.html, recommender_nmf.html, recommender_user.html : The pages where the recommended movies are shown.
+
 
 
 
