@@ -6,9 +6,9 @@ It is one of the weekly projects.
 This is a web-app using Flask. 
 1. Main page:
 The main page asks the user to select from:
-- Random recommendation (I am feeling lucky)
-- NMF model (I want a good guess)
-- User-similarity (What do people like me watch?)
+- *Random recommendation* (I am feeling lucky)
+- *NMF (Non-negative matrix factorization)* model (I want a good guess)
+- *User-similarity* (What do people like me watch?)
 
 2. User-input page:
 When selecting the method of the movie recommendation, the user is directed to the next page.
@@ -47,13 +47,52 @@ The user should give the input for year and genre selection.
 The user should rate 5 movies and give the input for year and genre selection.
 4. user_sim.html : The page the user is directed after selecting 'What do people like me watch?'. 
 The user should rate 5 movies and give the input for year and genre selection.
-4. recommener_random.html, recommender_nmf.html, recommender_user.html : The pages where the recommended movies are shown.
+5. recommener_random.html, recommender_nmf.html, recommender_user.html : The pages where the recommended movies are shown.
 
 
+### Files
 
+- combine_csvs.py
 
+Used for data preparation. 
+The csvs that are in 'recommendation_movies' folder are combined to create a dataframe that includes the movie info for year, genre, and tmdb link.
+The dataframe is saved as a csv file that is used to in utils.py. 
+The genre and year info is implemented as user preference for movie recommendation.
+
+- utils.py
+
+Includes helper functions to be used in recommender.py and app.py. 
+The functions are used to create user-dataframe, insert new user, sort year and genre, implement the tmdb link, and pickle the nmf model and factorizers.
+
+- nmf_model.py
+
+Non-negative matrix factorization
+
+Creates the nmf model based on the user-ratings. 
+For NA values simple imputer filling with constant average (2.5) is used. This can be changed for model optimization. 
+The simple imputer is pickled as simpleimputer.pickle. Pickling of the imputation will be handy when different methods for imputation is used.
+The rating matrix is pickled as R_table and R_imp_table. The Q factorizer is pickled as Q_table. The trained model is pickled as trained_nmf_model.
+
+- recommender.py
+
+Includes the three different methods used for movie recommendation
+
+- app.py
+
+Runs the web-app.
+
+- Procfile and requirements.txt 
+Files that are used to deploy the web-app to Heroku. 
+For deployment please refer to [Heroku-Documentation](https://devcenter.heroku.com/categories/reference), especially [deployment-with-Git](https://devcenter.heroku.com/categories/deploying-with-git)
+
+## Usage
+
+To run the web-app locally: 
+1. In your terminal go to the folder that includes all the files.
+2. run the app.py
 
 # Ideas for further development:
 
+Play around with the imputation
 Save the user and keep track of their rating 
 Use IMDB API 
