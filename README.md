@@ -4,16 +4,20 @@ This project was written during Spiced Academy Data Science Bootcamp.
 It is one of the weekly projects.
 
 This is a web-app using Flask. 
+
+<p float="left">
+    <img src="https://github.com/gulcinvardar/movie_recommender/blob/main/example_images_of_pages/main_page.jpg" width="300" alt="Main Page">
+    <img src="https://github.com/gulcinvardar/movie_recommender/blob/main/example_images_of_pages/user_input_page.jpg" width="300" alt="Example User-Input page">
+    <img src="https://github.com/gulcinvardar/movie_recommender/blob/main/example_images_of_pages/recommendation_page.jpg" width="300" alt="Example Recommendation page">
+</p>
+
+
 1. Main page:
 The main page asks the user to select from:
 - *Random recommendation* (I am feeling lucky)
 - *NMF (Non-negative matrix factorization)* model (I want a good guess)
 - *User-similarity* (What do people like me watch?)
 
-<p float="left">
-    <img src="https://github.com/gulcinvardar/movie_recommender/blob/main/example_images_of_pages/main_page.jpg" width="200">
-    <img src="https://github.com/gulcinvardar/movie_recommender/blob/main/example_images_of_pages/main_page.jpg" width="200">
-</p>
 
 2. User-input page:
 When selecting the method of the movie recommendation, the user is directed to the next page.
